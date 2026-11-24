@@ -1,16 +1,38 @@
-# React + Vite
+# Date Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app that moves a date forward or backward by a selected number of
+days. The starting date is November 24, 2026.
 
-Currently, two official plugins are available:
+The original Date Counter v1 used `useState`. It has since been improved in the
+latest version to use React's `useReducer` for managing the counter state.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Use the counter
 
-## React Compiler
+- Adjust the range slider to choose a step from 0 to 10 days.
+- Use the `+` and `-` buttons to move the date by that step.
+- Edit the count directly to jump to a specific number of days from the start.
+- Select **Reset** to return the count to 0 and the step to 1.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+Install the dependencies and start the Vite development server:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite in your browser.
+
+## Other commands
+
+```bash
+npm run build    # Create a production build
+npm run preview  # Preview the production build
+npm run lint     # Run ESLint
+```
+
+## Built with
+
+- React
+- Vite
